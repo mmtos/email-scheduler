@@ -1,0 +1,28 @@
+##Spring Datasource
+spring.datasource:
+    username: ENC(22UR6RWFHN9HWTdV84AnqHCCrFcSItbU)
+    password: ENC(PkePrQT8Ox/VXK+9/mXitw==)
+    url: jdbc:mysql://localhost:3306/quartz_db?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+## Quartz Properties
+spring.quartz:
+  job-store-type: jdbc
+  properties:
+    org.quartz.threadPool.threadCount: 6
+
+## Mail Properties
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: <google email>
+    password: <password>
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+## Encrypt Bean
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
